@@ -59,7 +59,33 @@
             </div>
         </div>
     </div>
-    <script></script>
+    
     
 </body>
+
+<!--Script to handling sending reservation to the server-->
+<script type="text/javascript">
+  $("#").on("click", function(){
+    var newReservation = {
+
+    };
+    var currentURL = window.location.origin;
+
+    $.post(currentURL + "/api/tables", newReservation, 
+    function(data){
+      if(data == true){
+        // Reservation is made display
+      } else {
+        // Sorry, added to wait list
+      }
+      // Clear the form
+      $("#").val("");
+      $("#").val("");
+      $("#").val("");
+      $("#").val("");     
+    });
+  });
+
+</script>
+
 </html>
