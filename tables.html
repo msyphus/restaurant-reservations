@@ -47,4 +47,42 @@
         <!-- Waiting List Panel -->
     </div>
 </div>
-    
+</div>
+
+<!--Script to handle the information pull from our database-->
+<script type="text/javascript">
+  // Check the reservations already in place
+  function tableQuery(){
+    var currentUrl = window.location.origin;
+
+    $.ajax({url: currentURL + "/api/tables", method: "GET"})
+    .done(function(tabledata){
+      for (let i = 0; i < tableData.length; i++){
+        var table = $("<div>");
+        table.addClass("reservation");
+        table.attr("id", "table" + (i+1));
+        $("#tableSection").append(table);
+      };
+    })
+  };
+
+  // Check the wait list and update those tables
+  function waitlistQuery(){
+    var currentUrl = window.location.origin;
+
+    $.ajax({url: currentURL + "/api/tables", method: "GET"})
+    .done(function(tabledata){
+      for (let i = 0; i < tableData.length; i++){
+        var table = $("<div>");
+        table.addClass("waitlist");
+        table.attr("id","wait" + (i+1));
+        $("#waitSection").append(table);
+
+      };
+    });
+  };
+
+</script>
+
+</body>
+</html>
