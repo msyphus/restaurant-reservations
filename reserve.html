@@ -66,9 +66,12 @@
 
 <!--Script to handling sending reservation to the server-->
 <script type="text/javascript">
-  $("#").on("click", function(){
+  $(".submit").on("click", function(){
     var newReservation = {
-
+      name: $("#reserve_name").val(),
+      phone: $("#reserve_phone").val(),
+      email: $("#reserve_email").val(),
+      id: $("#reserve_uniqueID").val()
     };
     var currentURL = window.location.origin;
 
@@ -80,10 +83,10 @@
         // Sorry, added to wait list
       }
       // Clear the form
-      $("#").val("");
-      $("#").val("");
-      $("#").val("");
-      $("#").val("");     
+      $("#reserve_name").val("");
+      $("#reserve_phone").val("");
+      $("#reserve_email").val("");
+      $("#reserve_uniqueID").val("");     
     });
   });
 
