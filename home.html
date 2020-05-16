@@ -3,29 +3,55 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Restaurant Reservations</title>
   <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
   <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </head>
 
-<body>
-
+<body data-gr-c-s-loaded="true">
   <div class="container">
-    <div class="jumbotron" class="text-center">
+    <div class="jumbotron">
       <h1 class="text-center">Hot Restaurant</h1>
       <h3 class="text-center">We only have 5 tables! Book your seat before they all are gone!</h3>
       <hr>
-      <a href="/add"><button class="btn btn-primary btn-lg"><span class="fa fa-plus"></span> View Tables
+      <a href="/add"><button class="btn btn-primary btn-lg"><span><i class="glyphicon glyphicon-list"></i></span> View Tables
           </button></a>
       <a href="/api/characters"><button class="btn btn-danger btn-lg" class="text-center"><span
             class="fa fa-eye"></span> Make Reservation</button></a>
     </div>
+    
+
+  <!-- <script type="text/javascript">
+    $("#search-btn").on("click", function() {
+      var searchedCharacter = $("#character-search").val().trim();
+
+      // Using a RegEx Pattern to remove spaces from searchedCharacter
+      // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+      searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
+
+      $.get("/api/characters/" + searchedCharacter, function(data) {
+        console.log(data);
+        if (data) {
+          $("#stats").show();
+          $("#name").text(data.name);
+          $("#role").text(data.role);
+          $("#age").text(data.age);
+          $("#force-points").text(data.forcePoints);
+        } else {
+          $("#name").text(
+            "The force is not strong with this one. Your character was not found.");
+          $("#stats").hide();
+        }
+      });
+    }); -->
+
+  </script>
 </body>
 
 </html>
