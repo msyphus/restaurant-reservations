@@ -22,10 +22,43 @@
       <h2 class="text-center">Make your reservation</h2>
       <br>
       <div class="text-center">
-      <a href="/reserve"><button class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-credit-card"></span> Make Reservation
+      <a href="/tables"><button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-list-alt"></span> View Tables
           </button></a>
       <a href="/"><button class="btn btn-default btn-lg" class="text-center"><span
-            class="glyphicon glyphicon-home"></span> Make Reservation</button></a>
+            class="glyphicon glyphicon-home"></span></button></a>
     </div>
     </div>
-    
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- reservation page -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Table Reservation</h4>
+                </div>
+                <div class="panel-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for>Name</label>
+                            <input type="text" class="form-control" id="reserve_name">
+                        </div>
+                        <div class="form-group">
+                            <label for>Phone Number</label>
+                            <input type="text" class="form-control" id="reserve_phone">
+                        </div>
+                        <div class="form-group">
+                            <label for>Email</label>
+                            <input type="text" class="form-control" id="reserve_email">
+                        </div>
+                        <div class="form-group">
+                            <label for>Unique ID</label>
+                            <input type="text" class="form-control" id="reserve_uniqueID">
+                        </div>
+                        <button type="submit" class="btn btn-primary submit">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script></script>
+</body>
+</html>
